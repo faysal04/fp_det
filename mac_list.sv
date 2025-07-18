@@ -1,0 +1,8 @@
+`include "../design/synchronizer.sv"
+`include "../design/allignment.sv"
+`include "../design/accumulator.sv"
+`include "../design/preamble_detector.sv"
+`include "../design/link_speed_detector.sv"
+`include "../design/async_fifo.sv"
+`include "../design/read_buffer.sv"
+`include "../design/mac.sv"
