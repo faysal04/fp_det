@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Jun 01 10:08:51 2026
+# Process ID: 2496
+# Log file: Y:/Virtex 6 ISE design/Virtex_6_FP_det/planAhead_run_2/planAhead.log
+# Journal file: Y:/Virtex 6 ISE design/Virtex_6_FP_det/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -486 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {Y:/Virtex 6 ISE design/Virtex_6_FP_det/pa.fromNetlist.tcl}
+# create_project -name Virtex_6_FP_det -dir "Y:/Virtex 6 ISE design/Virtex_6_FP_det/planAhead_run_2" -part xc6vlx240tff1156-1
+create_project: Time (s): elapsed = 00:00:07 . Memory (MB): peak = 429.848 ; gain = 69.531
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {Y:/Virtex 6 ISE design/Virtex_6_FP_det} {ipcore_dir} {C:/Coregen} }
+# add_files [list {ipcore_dir/Ethernet_Virtex6.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Coregen/chipscope_icon.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Coregen/chipscope_ila.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Coregen/uart_test_icon.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {C:/Coregen/uart_test_ila.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "top_wrapper.ucf" [current_fileset -constrset]
+Adding file 'Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.ucf' to fileset 'constrs_1'
+# add_files [list {top_wrapper.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6vlx240tff1156-1
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design top_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to top_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus clk_counter<10 : 0> on block uart_tx is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ip_header_0[159 : 0] on block
+   read_buffer is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus tcp_header_0[127 : 0] on block
+   read_buffer is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file top_wrapper.edif ...
+ngc2edif: Total memory usage is 93560 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/Virtex_6_FP_det.data/cache/top_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/Virtex_6_FP_det.data/cache/top_wrapper_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 466 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockPlacerRules.xml
+Loading clock capable ios from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockCapableIOBs.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ff1156/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/drc.xml
+Parsing UCF File [Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.ucf]
+Finished Parsing UCF File [Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 466 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, RAMD64E, RAMD64E, MUXF7, MUXF7): 455 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 10 instances
+
+Phase 0 | Netlist Checksum: 3bc08ac2
+link_design: Time (s): elapsed = 00:00:30 . Memory (MB): peak = 713.969 ; gain = 276.680
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See Y:/Virtex 6 ISE design/Virtex_6_FP_det\planAhead_pid2496.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Jun 01 10:18:02 2026...
+INFO: [Common 17-83] Releasing license: PlanAhead

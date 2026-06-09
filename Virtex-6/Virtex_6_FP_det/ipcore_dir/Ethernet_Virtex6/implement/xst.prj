@@ -1,0 +1,17 @@
+verilog work ../example_design/Ethernet_Virtex6_mod.v
+verilog work ../example_design/common/reset_sync.v
+verilog work ../example_design/common/sync_block.v
+verilog work ../example_design/fifo/tx_client_fifo_8.v
+verilog work ../example_design/fifo/rx_client_fifo_8.v
+verilog work ../example_design/fifo/ten_100_1g_eth_fifo.v
+verilog work ../example_design/pat_gen/address_swap.v
+verilog work ../example_design/pat_gen/axi_mux.v
+verilog work ../example_design/pat_gen/axi_pat_gen.v
+verilog work ../example_design/pat_gen/axi_pat_check.v
+verilog work ../example_design/pat_gen/axi_pipe.v
+verilog work ../example_design/pat_gen/basic_pat_gen.v
+verilog work ../example_design/physical/gmii_if.v
+verilog work ../example_design/clk_wiz.v
+verilog work ../example_design/Ethernet_Virtex6_block.v
+verilog work ../example_design/Ethernet_Virtex6_fifo_block.v
+verilog work ../example_design/Ethernet_Virtex6_example_design.v

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Y:\Virtex 6 ISE design\Virtex_6_FP_det\top_wrapper.ncd
+OUTFILE=Y:\Virtex 6 ISE design\Virtex_6_FP_det\top_wrapper.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-1ff1156
+WORKINGDIR=Y:\Virtex 6 ISE design\Virtex_6_FP_det
+LICENSE=ISE
+USER_INFO=__0_0_0

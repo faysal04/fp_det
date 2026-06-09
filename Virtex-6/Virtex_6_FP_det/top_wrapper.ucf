@@ -1,0 +1,56 @@
+
+
+NET "rxd[0]" LOC = AN13;
+//AF14
+NET "rxd[1]" LOC = AF14;
+//AE13
+NET "rxd[2]" LOC = AE14;
+NET "rxd[3]" LOC = AN12;
+NET "rxd[4]" LOC = AM12;
+NET "rxd[5]" LOC = AD11;
+NET "rxd[6]" LOC = AC12;
+NET "rxd[7]" LOC = AC13;
+NET "clk_200_p" LOC = J9;
+NET "col" LOC = AK13;
+NET "crs" LOC = AL13;
+//NET "rx_clk" LOC = AP11;
+NET "fp_det_LED" LOC = AP24;
+NET "reset_in" LOC = G26;
+
+
+NET "phy_rx_clk" LOC = AP11;
+NET "rx_er" LOC = AG12;
+NET "rx_dv" LOC = AM13;
+
+
+NET "rx_er" IOSTANDARD = LVCMOS25;
+NET "rx_dv" IOSTANDARD = LVCMOS25;
+NET "reset_in" IOSTANDARD = LVCMOS25;
+NET "phy_rx_clk" IOSTANDARD = LVCMOS25;
+NET "fp_det_LED" IOSTANDARD = LVCMOS25;
+NET "crs" IOSTANDARD = LVCMOS25;
+NET "col" IOSTANDARD = LVCMOS25;
+NET "clk_200_p" IOSTANDARD = LVDS_25;
+NET "rxd[7]" IOSTANDARD = LVCMOS25;
+NET "rxd[6]" IOSTANDARD = LVCMOS25;
+NET "rxd[5]" IOSTANDARD = LVCMOS25;
+NET "rxd[4]" IOSTANDARD = LVCMOS25;
+NET "rxd[3]" IOSTANDARD = LVCMOS25;
+NET "rxd[2]" IOSTANDARD = LVCMOS25;
+NET "rxd[1]" IOSTANDARD = LVCMOS25;
+NET "rxd[0]" IOSTANDARD = LVCMOS25;
+NET "phy_rst_n" LOC = AH13;
+NET "phy_rst_n" IOSTANDARD = LVCMOS25;
+
+
+NET "CTS" LOC = T23;
+NET "RTS" LOC = T24;
+NET "uart_tx_out" LOC = J25;
+
+# PlanAhead Generated physical constraints 
+
+NET "speed" LOC = AE21;
+NET "ready" LOC = AH28;
+
+NET "clk_200_p" TNM_NET = clk_200_grp;
+TIMESPEC TS_clk_200 = PERIOD "clk_200_grp" 5 ns HIGH 50%;

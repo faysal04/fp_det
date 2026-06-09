@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Y:\Virtex 6 ISE design\Virtex_6_FP_det\impact.xsl
+OUTFILE=Y:\Virtex 6 ISE design\Virtex_6_FP_det\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=Y:\Virtex 6 ISE design\Virtex_6_FP_det
+LICENSE=iMPACT
+USER_INFO=iMPACT
