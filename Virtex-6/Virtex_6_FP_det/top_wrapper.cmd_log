@@ -1,0 +1,70 @@
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+xst -intstyle ise -ifn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.xst" -ofn "Y:/Virtex 6 ISE design/Virtex_6_FP_det/top_wrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd C:/Coregen -nt timestamp -uc top_wrapper.ucf -p xc6vlx240t-ff1156-1 "top_wrapper.ngc" top_wrapper.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd top_wrapper.pcf 
+par -w -intstyle ise -ol high -mt off top_wrapper_map.ncd top_wrapper.ncd top_wrapper.pcf 
+trce -intstyle ise -v 3 -tsi top_wrapper.tsi -s 1 -n 3 -fastpaths -xml top_wrapper.twx top_wrapper.ncd -o top_wrapper.twr top_wrapper.pcf -ucf top_wrapper.ucf 
+xpwr -intstyle ise top_wrapper.ncd top_wrapper.pcf -o top_wrapper.pwr 
+bitgen -intstyle ise -f top_wrapper.ut top_wrapper.ncd 

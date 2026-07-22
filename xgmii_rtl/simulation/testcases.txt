@@ -1,0 +1,8 @@
+Following are the testcases for regress testing of MAC:
+1 - enabling error signal in between (DONE)
+2 - check the minimum IFG gap (DONE)
+3 - alignment (DONE)
+4 - with smallest packet (64 bytes) (DONE)
+5 - with largest packet (1518 bytes)
+6 - terminate during valid transacion
+7 - noise (send start siganls and terminate right after 2 bytes to see if counter waits to reach 7 )

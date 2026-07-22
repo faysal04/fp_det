@@ -1,0 +1,167 @@
+`timescale 1ns/1ps
+
+module top (
+    // gmii/mii rx channel
+    input         rx_er,
+    input         rx_dv,
+    input  [7:0]  rxd,
+    input         rx_clk,
+    // gmii/mii control signals
+    input         crs,
+    input         col,
+    // gmii/mii tx channel
+    input         tx_clk,
+    output        tx_er,
+    output        tx_en,
+    output [7:0]  txd,
+    // mac control signals
+    input         clk,
+    input         rst_n,
+    input         link_active,
+    // input         extern_preamble,
+    // fp detector outputs
+    output [15:0] fp_num0,
+    output [15:0] fp_num1,
+    output [15:0] fp_num2,
+    output [15:0] fp_num3,
+    output [15:0] fp_num4,
+    output [15:0] fp_num5,
+    output [15:0] fp_num6,
+    output [15:0] fp_num7,
+    output [15:0] fp_num8,
+    output [15:0] fp_num9,
+    output [15:0] fp_num10,
+    output [15:0] fp_num11,
+    output [15:0] fp_num12,
+    output [15:0] fp_num13,
+    output [15:0] fp_num14,
+    output [15:0] fp_num15,
+    output [15:0] fp_num16,
+    output [15:0] fp_num17,
+    output        fp_det,
+    output [15:0] ip_id,
+    output [31:0] ip_dst,
+    output [31:0] ip_src,
+    output [15:0] tcp_sport,
+    output [15:0] tcp_dport,
+    output [31:0] tcp_ack,
+    output [31:0] tcp_seq,
+    output [15:0] tcp_window,
+    output        valid,
+    output [431:0] packet,
+
+    output [15:0] packet_type,
+    output [3:0]  version, 
+    output [3:0] ihl,
+    output [7:0]  tcp_flags, 
+    output [7:0] protocol,
+
+    output speed_probe,
+    output ready_probe,
+    output [7:0] rdata_probe,
+    output accum_state_probe,
+    output [3:0] accum_data_in_lsb_probe,
+    output [4:0] rbin_probe,
+    output [4:0] wbin_probe,
+    output [4:0] rbin_next_probe,
+    output [4:0] wbin_next_probe,
+    output [4:0] wq1_probe,
+    output [4:0] wq2_probe,
+    output [4:0] rgray_next_probe,
+    output [1:0] buffer_state_probe,
+    output [10:0] counter_probe,
+    output [7:0] buffer_probe
+
+    // output reg [7:0] eth_header_probe [13:0],
+    // output reg [7:0] ip_header_probe  [19:0],
+    // output reg [7:0] tcp_header_probe [19:0]
+     
+);
+
+    // Instantiate MAC
+    mac inst_mac (
+        .rx_er       (rx_er),
+        .rx_dv       (rx_dv),
+        .rxd         (rxd),
+        .rx_clk      (rx_clk),
+        .crs         (crs),
+        .col         (col),
+        .tx_clk      (tx_clk),
+        .tx_er       (tx_er),
+        .tx_en       (tx_en),
+        .txd         (txd),
+        .clk         (clk),
+        .rst_n       (rst_n),
+        .link_active (link_active),
+        .ip_id       (ip_id),
+        .ip_dst      (ip_dst),
+        .ip_src      (ip_src),
+        .tcp_src     (tcp_sport),
+        .tcp_dst     (tcp_dport),
+        .tcp_ack     (tcp_ack),
+        .tcp_seq     (tcp_seq),
+        .tcp_window  (tcp_window),
+        .fields_valid(valid),
+        .packet(packet)
+        
+    //          .packet_type(packet_type),
+    // .version(version), 
+    // .ihl(ihl),
+    // .tcp_flags(tcp_flags), 
+    // .protocol(protocol),
+
+        // .extern_preamble(extern_preamble),
+        // .speed_probe(speed_probe),
+        // .ready_probe(ready_probe),
+        // .rdata_probe(rdata_probe),
+        // .accum_state_probe(accum_state_probe),
+        // .accum_data_in_lsb_probe(accum_data_in_lsb_probe),
+        // .wbin_probe(wbin_probe),
+        // .rbin_next_probe(rbin_next_probe),
+        // .wbin_next_probe(wbin_next_probe),
+        // .wq1_probe(wq1_probe),
+        // .wq2_probe(wq2_probe),
+        // .rgray_next_probe(rgray_next_probe),
+        // .buffer_state_probe(buffer_state_probe),
+        // .counter_probe(counter_probe),
+        // .buffer_probe(buffer_probe)
+
+        // .eth_header_probe(eth_header_probe),
+        // .tcp_header_probe(tcp_header_probe),
+        // ip_header_probe(ip_header_probe)
+    );
+
+    // Instantiate FP top module
+    fp_top inst_fp_top (
+        .clk       (clk),
+        .rst       (rst_n),
+        .valid     (valid),
+        .tcp_window(tcp_window),
+        .tcp_seq   (tcp_seq),
+        .ip_id     (ip_id),
+        .tcp_sport (tcp_sport),
+        .tcp_ack   (tcp_ack),
+        .tcp_dport (tcp_dport),
+        .ip_dst    (ip_dst),
+        .fp_num0   (fp_num0),
+        .fp_num1   (fp_num1),
+        .fp_num2   (fp_num2),
+        .fp_num3   (fp_num3),
+        .fp_num4   (fp_num4),
+        .fp_num5   (fp_num5),
+        .fp_num6   (fp_num6),
+        .fp_num7   (fp_num7),
+        .fp_num8   (fp_num8),
+        .fp_num9   (fp_num9),
+        .fp_num10  (fp_num10),
+        .fp_num11  (fp_num11),
+        .fp_num12  (fp_num12),
+        .fp_num13  (fp_num13),
+        .fp_num14  (fp_num14),
+        .fp_num15  (fp_num15),
+        .fp_num16  (fp_num16),
+        .fp_num17  (fp_num17),
+        .fp_det    (fp_det)
+    );
+
+endmodule

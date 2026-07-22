@@ -1,0 +1,2270 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'top_wrapper'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail
+-ir off -pr off -lc off -power off -o top_wrapper_map.ncd top_wrapper.ngd
+top_wrapper.pcf 
+Target Device  : xc6vlx240t
+Target Package : ff1156
+Target Speed   : -1
+Mapper Version : virtex6 -- $Revision: 1.55 $
+Mapped Date    : Tue Jun 09 12:46:49 2026
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   11
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,906 out of 301,440    1%
+    Number used as Flip Flops:               3,905
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      3,877 out of 150,720    2%
+    Number used as logic:                    1,561 out of 150,720    1%
+      Number using O6 output only:           1,021
+      Number using O5 output only:             319
+      Number using O5 and O6:                  221
+      Number used as ROM:                        0
+    Number used as Memory:                   1,843 out of  58,400    3%
+      Number used as Dual Port RAM:          1,832
+        Number using O6 output only:         1,824
+        Number using O5 output only:             0
+        Number using O5 and O6:                  8
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            11
+        Number using O6 output only:            11
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:    473
+      Number with same-slice register load:    452
+      Number with same-slice carry load:        21
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,541 out of  37,680    4%
+  Number of LUT Flip Flop pairs used:        5,453
+    Number with an unused Flip Flop:         2,120 out of   5,453   38%
+    Number with an unused LUT:               1,576 out of   5,453   28%
+    Number of fully used LUT-FF pairs:       1,757 out of   5,453   32%
+    Number of unique control sets:              63
+    Number of slice register sites lost
+      to control set restrictions:             155 out of 301,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       310 out of     600   51%
+    Number of LOCed IOBs:                       21 out of     310    6%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
+  Number of BUFG/BUFGCTRLs:                      3 out of      32    9%
+    Number used as BUFGs:                        3
+    Number used as BUFGCTRLs:                    0
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFIODQSs:                           0 out of      72    0%
+  Number of BUFRs:                               0 out of      36    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of      18    0%
+  Number of IODELAYE1s:                          0 out of     720    0%
+  Number of MMCM_ADVs:                           1 out of      12    8%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       0 out of       4    0%
+
+Average Fanout of Non-Clock Nets:                4.98
+
+Peak Memory Usage:  842 MB
+Total REAL time to MAP completion:  1 mins 5 secs 
+Total CPU time to MAP completion:   1 mins 2 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:MapLib:701 - Signal txd<7> connected to top level port txd<7> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<6> connected to top level port txd<6> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<5> connected to top level port txd<5> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<4> connected to top level port txd<4> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<3> connected to top level port txd<3> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<2> connected to top level port txd<2> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<1> connected to top level port txd<1> has been
+   removed.
+WARNING:MapLib:701 - Signal txd<0> connected to top level port txd<0> has been
+   removed.
+WARNING:MapLib:701 - Signal tx_en connected to top level port tx_en has been
+   removed.
+WARNING:MapLib:701 - Signal tx_er connected to top level port tx_er has been
+   removed.
+WARNING:MapLib:701 - Signal ready connected to top level port ready has been
+   removed.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:56 - Part 'xc6vlx240t' is not a WebPack part.
+INFO:LIT:243 - Logical network data_send_buffer<455> has no load.
+INFO:LIT:243 - Logical network tx_clk has no load.
+INFO:LIT:243 - Logical network phy_link has no load.
+INFO:LIT:243 - Logical network rxd_out<7> has no load.
+INFO:LIT:243 - Logical network rxd_out<6> has no load.
+INFO:LIT:243 - Logical network rxd_out<5> has no load.
+INFO:LIT:243 - Logical network rxd_out<4> has no load.
+INFO:LIT:243 - Logical network rxd_out<3> has no load.
+INFO:LIT:243 - Logical network rxd_out<2> has no load.
+INFO:LIT:243 - Logical network rxd_out<1> has no load.
+INFO:LIT:243 - Logical network rxd_out<0> has no load.
+INFO:LIT:243 - Logical network packet_type<15> has no load.
+INFO:LIT:243 - Logical network packet_type<14> has no load.
+INFO:LIT:243 - Logical network packet_type<13> has no load.
+INFO:LIT:243 - Logical network packet_type<12> has no load.
+INFO:LIT:243 - Logical network packet_type<11> has no load.
+INFO:LIT:243 - Logical network packet_type<10> has no load.
+INFO:LIT:243 - Logical network packet_type<9> has no load.
+INFO:LIT:243 - Logical network packet_type<8> has no load.
+INFO:LIT:243 - Logical network packet_type<7> has no load.
+INFO:LIT:243 - Logical network packet_type<6> has no load.
+INFO:LIT:243 - Logical network packet_type<5> has no load.
+INFO:LIT:243 - Logical network packet_type<4> has no load.
+INFO:LIT:243 - Logical network packet_type<3> has no load.
+INFO:LIT:243 - Logical network packet_type<2> has no load.
+INFO:LIT:243 - Logical network packet_type<1> has no load.
+INFO:LIT:243 - Logical network packet_type<0> has no load.
+INFO:LIT:243 - Logical network version<3> has no load.
+INFO:LIT:243 - Logical network version<2> has no load.
+INFO:LIT:243 - Logical network version<1> has no load.
+INFO:LIT:243 - Logical network version<0> has no load.
+INFO:LIT:243 - Logical network ihl<3> has no load.
+INFO:LIT:243 - Logical network ihl<2> has no load.
+INFO:LIT:243 - Logical network ihl<1> has no load.
+INFO:LIT:243 - Logical network ihl<0> has no load.
+INFO:LIT:243 - Logical network tcp_flags<7> has no load.
+INFO:LIT:243 - Logical network tcp_flags<6> has no load.
+INFO:LIT:243 - Logical network tcp_flags<5> has no load.
+INFO:LIT:243 - Logical network tcp_flags<4> has no load.
+INFO:LIT:243 - Logical network tcp_flags<3> has no load.
+INFO:LIT:243 - Logical network tcp_flags<2> has no load.
+INFO:LIT:243 - Logical network tcp_flags<1> has no load.
+INFO:LIT:243 - Logical network tcp_flags<0> has no load.
+INFO:LIT:243 - Logical network protocol<7> has no load.
+INFO:LIT:243 - Logical network protocol<6> has no load.
+INFO:LIT:243 - Logical network protocol<5> has no load.
+INFO:LIT:243 - Logical network protocol<4> has no load.
+INFO:LIT:243 - Logical network protocol<3> has no load.
+INFO:LIT:243 - Logical network protocol<2> has no load.
+INFO:LIT:243 - Logical network protocol<1> has no load.
+INFO:LIT:243 - Logical network protocol<0> has no load.
+INFO:LIT:243 - Logical network crs_IBUF has no load.
+INFO:LIT:243 - Logical network col_IBUF has no load.
+INFO:LIT:243 - Logical network CTS_IBUF has no load.
+INFO:LIT:243 - Logical network inst_top/crs has no load.
+INFO:LIT:243 - Logical network inst_top/col has no load.
+INFO:LIT:243 - Logical network inst_top/tx_clk has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<31> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<30> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<29> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<28> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<27> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<26> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<25> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<24> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<23> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<22> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<21> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<20> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<19> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<18> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<17> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<16> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<15> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<14> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<13> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<12> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<11> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<10> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<9> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<8> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<7> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<6> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<5> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<4> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<3> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<2> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<1> has no load.
+INFO:LIT:243 - Logical network inst_top/ip_src<0> has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem3/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem1/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem2/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem4/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem5/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem8/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem6/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem7/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem9/SPO
+   has no load.
+INFO:LIT:243 - Logical network inst_top/inst_mac/inst_async_fifo/Mram_mem10/SPO
+   has no load.
+INFO:LIT:243 - Logical network clk_wiz_inst/CLK_OUT1 has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem1/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem2/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem5/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem3/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem4/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem6/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem7/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem8/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem9/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem10/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem11/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem12/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem13/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem14/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem15/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem16/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem17/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem20/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem18/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem19/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem21/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem22/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem23/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem24/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem25/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem26/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem27/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem28/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem29/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem30/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem31/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem32/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem35/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem33/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem34/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem36/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem37/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem38/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem39/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem42/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem40/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem41/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem43/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem44/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem45/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem46/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem49/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem47/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem48/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem50/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem51/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem52/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem53/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem54/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem55/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem56/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem57/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem58/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem59/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem60/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem61/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem64/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem62/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem63/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem65/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem66/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem67/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem68/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem71/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem69/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem70/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem72/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem73/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem74/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem75/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem78/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem76/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem77/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem79/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem80/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem81/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem82/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem83/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem84/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem85/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem86/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem87/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem88/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem89/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem90/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem93/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem91/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem92/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem94/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem95/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem96/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem97/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem100/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem98/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem99/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem101/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem102/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem103/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem104/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem107/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem105/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem106/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem108/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem109/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem110/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem111/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem112/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem113/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem114/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem115/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem116/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem117/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem118/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem119/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem122/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem120/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem121/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem123/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem124/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem125/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem126/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem129/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem127/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem128/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem130/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem131/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem132/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem133/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem136/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem134/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem135/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem137/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem138/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem139/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem140/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem141/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem142/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem143/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem144/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem145/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem146/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem147/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem148/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem151/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem149/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem150/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem152/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem153/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem154/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem155/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem158/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem156/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem157/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem159/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem160/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem161/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem162/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem165/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem163/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem164/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem166/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem167/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem168/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem169/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem170/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem171/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem172/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem173/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem174/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem175/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem176/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem177/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem180/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem178/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem179/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem181/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem182/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem183/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem184/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem187/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem185/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem186/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem188/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem189/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem190/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem191/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem194/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem192/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem193/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem195/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem196/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem197/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem198/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem199/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem200/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem201/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem202/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem203/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem204/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem205/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem206/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem209/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem207/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem208/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem210/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem211/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem212/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem213/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem216/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem214/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem215/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem217/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem218/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem219/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem220/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem223/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem221/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem222/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem224/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem225/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem226/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem227/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem228/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem229/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem230/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem231/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem232/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem233/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem234/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem235/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem238/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem236/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem237/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem239/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem240/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem241/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem242/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem245/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem243/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem244/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem246/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem247/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem248/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem249/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem252/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem250/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem251/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem253/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem254/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem255/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem256/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem257/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem258/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem259/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem260/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem261/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem262/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem263/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem264/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem267/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem265/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem266/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem268/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem269/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem270/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem271/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem274/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem272/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem273/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem275/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem276/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem277/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem278/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem281/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem279/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem280/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem282/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem283/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem284/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem285/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem286/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem287/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem288/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem289/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem290/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem291/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem292/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem293/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem296/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem294/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem295/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem297/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem298/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem299/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem300/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem303/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem301/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem302/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem304/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem305/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem306/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem307/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem310/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem308/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem309/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem311/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem312/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem313/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem314/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem315/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem316/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem317/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem318/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem319/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem320/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem321/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem322/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem325/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem323/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem324/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem326/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem327/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem328/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem329/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem332/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem330/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem331/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem333/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem334/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem335/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem336/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem339/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem337/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem338/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem340/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem341/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem342/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem343/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem344/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem345/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem346/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem347/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem348/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem349/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem350/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem351/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem354/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem352/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem353/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem355/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem356/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem357/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem358/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem361/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem359/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem360/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem362/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem363/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem364/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem365/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem368/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem366/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem367/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem369/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem370/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem371/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem372/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem373/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem374/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem375/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem376/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem377/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem378/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem379/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem380/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem383/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem381/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem382/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem384/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem385/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem386/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem387/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem390/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem388/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem389/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem391/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem392/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem393/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem394/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem397/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem395/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem396/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem398/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem399/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem400/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem401/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem402/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem403/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem404/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem405/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem406/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem407/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem408/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem409/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem412/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem410/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem411/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem413/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem414/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem415/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem416/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem419/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem417/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem418/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem420/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem421/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem422/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem423/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem426/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem424/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem425/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem427/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem428/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem429/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem430/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem431/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem432/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem433/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem434/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem435/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem436/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem437/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem438/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem441/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem439/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem440/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem442/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem443/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem444/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem445/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem448/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem446/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem447/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem449/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem450/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem451/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem452/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem455/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem453/SPO has no load.
+INFO:LIT:243 - Logical network
+   buffer_logger_inst/inst_async_fifo_buffer/Mram_mem454/SPO has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 310 IOs, 22 are locked
+   and 288 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  25 block(s) removed
+  34 block(s) optimized away
+  27 signal(s) removed
+ 321 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "inst_top/inst_mac/inst_async_fifo/rgray_next_probe<0>" is sourceless
+and has been removed.
+The signal "inst_top/inst_mac/inst_read_buffer/packet_reg<431>" is sourceless
+and has been removed.
+ Sourceless block "inst_top/inst_mac/inst_read_buffer/packet_431" (FF) removed.
+  The signal "data_send_buffer<455>" is sourceless and has been removed.
+The signal "clk_wiz_inst/clkout0" is sourceless and has been removed.
+ Sourceless block "clk_wiz_inst/clkout1_buf" (CKBUF) removed.
+  The signal "clk_wiz_inst/CLK_OUT1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "txd_7_OBUF" is unused and has been removed.
+The signal "txd_6_OBUF" is unused and has been removed.
+The signal "txd_5_OBUF" is unused and has been removed.
+The signal "txd_4_OBUF" is unused and has been removed.
+The signal "txd_3_OBUF" is unused and has been removed.
+The signal "txd_2_OBUF" is unused and has been removed.
+The signal "txd_1_OBUF" is unused and has been removed.
+The signal "txd_0_OBUF" is unused and has been removed.
+The signal "tx_er_OBUF" is unused and has been removed.
+The signal "tx_en_OBUF" is unused and has been removed.
+The signal "ready_OBUF" is unused and has been removed.
+The signal "txd<7>" is unused and has been removed.
+ Unused block "txd_7_OBUF" (BUF) removed.
+The signal "txd<6>" is unused and has been removed.
+ Unused block "txd_6_OBUF" (BUF) removed.
+The signal "txd<5>" is unused and has been removed.
+ Unused block "txd_5_OBUF" (BUF) removed.
+The signal "txd<4>" is unused and has been removed.
+ Unused block "txd_4_OBUF" (BUF) removed.
+The signal "txd<3>" is unused and has been removed.
+ Unused block "txd_3_OBUF" (BUF) removed.
+The signal "txd<2>" is unused and has been removed.
+ Unused block "txd_2_OBUF" (BUF) removed.
+The signal "txd<1>" is unused and has been removed.
+ Unused block "txd_1_OBUF" (BUF) removed.
+The signal "txd<0>" is unused and has been removed.
+ Unused block "txd_0_OBUF" (BUF) removed.
+The signal "tx_en" is unused and has been removed.
+ Unused block "tx_en_OBUF" (BUF) removed.
+The signal "tx_er" is unused and has been removed.
+ Unused block "tx_er_OBUF" (BUF) removed.
+The signal "ready" is unused and has been removed.
+ Unused block "ready_OBUF" (BUF) removed.
+Unused block "inst_top/inst_mac/inst_read_buffer/packet_reg_431" (FF) removed.
+Unused block "ready" (PAD) removed.
+Unused block "tx_en" (PAD) removed.
+Unused block "tx_er" (PAD) removed.
+Unused block "txd<0>" (PAD) removed.
+Unused block "txd<1>" (PAD) removed.
+Unused block "txd<2>" (PAD) removed.
+Unused block "txd<3>" (PAD) removed.
+Unused block "txd<4>" (PAD) removed.
+Unused block "txd<5>" (PAD) removed.
+Unused block "txd<6>" (PAD) removed.
+Unused block "txd<7>" (PAD) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		buffer_logger_inst/inst_pkt_logger/tx_inst/XST_GND
+VCC 		buffer_logger_inst/inst_pkt_logger/tx_inst/XST_VCC
+GND 		clk_wiz_inst/XST_GND
+VCC 		clk_wiz_inst/XST_VCC
+GND 		inst_top/inst_fp_top/XST_GND
+VCC 		inst_top/inst_fp_top/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_0/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_0/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_10/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_10/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_11/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_11/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_12/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_12/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_17/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_17/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_4/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_4/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_8/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_8/XST_VCC
+GND 		inst_top/inst_fp_top/inst_gen_number_9/XST_GND
+VCC 		inst_top/inst_fp_top/inst_gen_number_9/XST_VCC
+VCC 		inst_top/inst_mac/inst_accumulator/XST_VCC
+GND 		inst_top/inst_mac/inst_accumulator/inst_allignment/XST_GND
+VCC 		inst_top/inst_mac/inst_accumulator/inst_allignment/XST_VCC
+GND 		inst_top/inst_mac/inst_async_fifo/XST_GND
+GND 		inst_top/inst_mac/inst_link_speed_detector/XST_GND
+VCC 		inst_top/inst_mac/inst_link_speed_detector/XST_VCC
+GND 		inst_top/inst_mac/inst_read_buffer/XST_GND
+VCC 		inst_top/inst_mac/inst_read_buffer/XST_VCC
+GND 		inst_top/inst_mac/inst_read_buffer/inst_preamble_detector/XST_GND
+VCC 		inst_top/inst_mac/inst_read_buffer/inst_preamble_detector/XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<1>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<2>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<3>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<4>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<5>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<6>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<7>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<8>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<9>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<10>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<11>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<12>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<13>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<14>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<15>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<16>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<17>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<18>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<19>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<20>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<21>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<22>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<23>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<24>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<25>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<26>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<27>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<28>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<29>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_cy<30>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<1>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<2>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<3>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<4>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<5>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<6>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<7>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<8>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<9>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<10>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<11>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<12>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<13>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<14>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<15>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<16>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<17>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<18>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<19>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<20>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<21>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<22>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<23>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<24>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<25>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<26>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<27>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<28>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<29>_rt
+LUT1 		inst_top/inst_mac/inst_link_speed_detector/Mcount_det_counter_cy<30>_rt
+LUT1
+		inst_top/inst_mac/inst_link_speed_detector/Madd_ref_counter[31]_GND_9_o_add_11
+_OUT_xor<31>_rt
+LUT1 		inst_top/inst_fp_top/inst_gen_number_8/fp_detected_rstpot_cy_rt
+LUT1 		inst_top/inst_fp_top/inst_gen_number_11/fp_detected_rstpot_cy_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num2_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num4_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num1_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num3_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num5_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num6_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num7_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num8_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num9_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num10_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num12_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num11_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num14_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num13_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num15_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num17_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num16_cy<14>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<1>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<2>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<3>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<4>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<5>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<6>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<7>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<8>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<9>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<10>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<11>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<12>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<13>_rt
+LUT1 		inst_top/inst_fp_top/Mcount_fp_num0_cy<14>_rt
+LUT1 		buffer_logger_inst/inst_pkt_logger/tx_inst/Mcount_clk_counter_cy<1>_rt
+LUT1 		buffer_logger_inst/inst_pkt_logger/tx_inst/Mcount_clk_counter_cy<2>_rt
+LUT1 		buffer_logger_inst/inst_pkt_logger/tx_inst/Mcount_clk_counter_cy<3>_rt
+LUT1 		buffer_logger_inst/inst_pkt_logger/tx_inst/Mcount_clk_counter_cy<4>_rt
+LUT1 		buffer_logger_inst/inst_pkt_logger/tx_inst/Mcount_clk_counter_cy<5>_rt
+LUT1 		buffer_logger_inst/inst_pkt_logger/tx_inst/Mcount_clk_counter_xor<6>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CTS                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| RTS                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| clk_200_n                          | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| clk_200_p                          | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| col                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| crs                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fp_det_LED                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num0<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num10<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num11<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num12<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num13<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num14<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num15<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num16<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num17<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num1<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num2<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num3<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num4<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num5<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num6<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num7<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num8<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fp_num9<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| phy_rst_n                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| phy_rx_clk                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| reset_in                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rx_dv                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rx_er                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<0>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<1>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<2>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<3>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<4>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<5>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<6>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd<7>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| speed                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uart_tx_out                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+MMCM_ADV "clk_wiz_inst/mmcm_adv_inst":
+BANDWIDTH:OPTIMIZED
+CASC_LOCK_EN:FALSE
+CLKBURST_ENABLE:FALSE
+CLKBURST_REPEAT:FALSE
+CLKFBIN_EDGE:FALSE
+CLKFBIN_NOCOUNT:TRUE
+CLKFBOUT_EDGE:FALSE
+CLKFBOUT_EN:TRUE
+CLKFBOUT_FRAC_EN:FALSE
+CLKFBOUT_FRAC_WF:FALSE
+CLKFBOUT_NOCOUNT:TRUE
+CLKFBOUT_USE_FINE_PS:FALSE
+CLKOUT0_EDGE:FALSE
+CLKOUT0_EN:FALSE
+CLKOUT0_FRAC_EN:FALSE
+CLKOUT0_FRAC_WF:FALSE
+CLKOUT0_NOCOUNT:TRUE
+CLKOUT0_USE_FINE_PS:FALSE
+CLKOUT1_EDGE:FALSE
+CLKOUT1_EN:FALSE
+CLKOUT1_NOCOUNT:TRUE
+CLKOUT1_USE_FINE_PS:FALSE
+CLKOUT2_EDGE:FALSE
+CLKOUT2_EN:FALSE
+CLKOUT2_NOCOUNT:TRUE
+CLKOUT2_USE_FINE_PS:FALSE
+CLKOUT3_EDGE:FALSE
+CLKOUT3_EN:FALSE
+CLKOUT3_NOCOUNT:TRUE
+CLKOUT3_USE_FINE_PS:FALSE
+CLKOUT4_CASCADE:FALSE
+CLKOUT4_EDGE:FALSE
+CLKOUT4_EN:FALSE
+CLKOUT4_NOCOUNT:TRUE
+CLKOUT4_USE_FINE_PS:FALSE
+CLKOUT5_EDGE:FALSE
+CLKOUT5_EN:FALSE
+CLKOUT5_FRAC_WF:FALSE
+CLKOUT5_NOCOUNT:TRUE
+CLKOUT5_USE_FINE_PS:FALSE
+CLKOUT6_EDGE:FALSE
+CLKOUT6_EN:FALSE
+CLKOUT6_FRAC_WF:FALSE
+CLKOUT6_NOCOUNT:TRUE
+CLKOUT6_USE_FINE_PS:FALSE
+CLOCK_HOLD:FALSE
+COMPENSATION:ZHOLD
+DIRECT_PATH_CNTRL:FALSE
+DIVCLK_EDGE:FALSE
+DIVCLK_NOCOUNT:TRUE
+EN_VCO_DIV1:FALSE
+EN_VCO_DIV6:FALSE
+GTS_WAIT:FALSE
+HVLF_CNT_TEST_EN:FALSE
+HVLF_STEP:FALSE
+IN_DLY_EN:TRUE
+MMCM_EN:TRUE
+PERF0_USE_CLK:FALSE
+PERF1_USE_CLK:FALSE
+PERF2_USE_CLK:FALSE
+PERF3_USE_CLK:FALSE
+SEL_SLIPD:FALSE
+STARTUP_WAIT:FALSE
+VLF_HIGH_DIS_B:TRUE
+VLF_HIGH_PWDN_B:TRUE
+CLKFBOUT_MULT_F = 5.0
+CLKFBOUT_PHASE = 0.0
+CLKIN1_PERIOD = 5
+CLKIN2_PERIOD = 0
+CLKOUT0_DIVIDE_F = 8.0
+CLKOUT0_DUTY_CYCLE = 0.5
+CLKOUT0_PHASE = 0.0
+CLKOUT1_DIVIDE = 5
+CLKOUT1_DUTY_CYCLE = 0.5
+CLKOUT1_PHASE = 0.0
+CLKOUT2_DIVIDE = 1
+CLKOUT2_DUTY_CYCLE = 0.5
+CLKOUT2_PHASE = 0.0
+CLKOUT3_DIVIDE = 1
+CLKOUT3_DUTY_CYCLE = 0.5
+CLKOUT3_PHASE = 0.0
+CLKOUT4_DIVIDE = 1
+CLKOUT4_DUTY_CYCLE = 0.5
+CLKOUT4_PHASE = 0.0
+CLKOUT5_DIVIDE = 1
+CLKOUT5_DUTY_CYCLE = 0.5
+CLKOUT5_PHASE = 0.0
+CLKOUT6_DIVIDE = 1
+CLKOUT6_DUTY_CYCLE = 0.5
+CLKOUT6_PHASE = 0.0
+DIVCLK_DIVIDE = 1
+REF_JITTER1 = 0.01
+REF_JITTER2 = 0.01
+
+
+
+Section 12 - Control Set Information
+------------------------------------
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal                                | Reset Signal                                                                   | Set Signal | Enable Signal                                                             | Slice Load Count | Bel Load Count |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| MMCM_PHASE_CALIBRATION_ML_LUT2_4_ML_NEW_CLK | clk_wiz_inst/mmcm_adv_inst_ML_NEW_OUT_0                                        |            |                                                                           | 2                | 2              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_200                                     |                                                                                |            |                                                                           | 291              | 1314           |
+| clk_200                                     |                                                                                |            | GLOBAL_LOGIC1                                                             | 6                | 11             |
+| clk_200                                     |                                                                                |            | buffer_logger_inst/inst_async_fifo_buffer/i_wr_o_wfull_AND_238_o          | 455              | 1820           |
+| clk_200                                     |                                                                                |            | buffer_logger_inst/inst_pkt_logger/_n0100_inv                             | 455              | 455            |
+| clk_200                                     |                                                                                |            | buffer_logger_inst/inst_pkt_logger/_n0109_inv                             | 4                | 8              |
+| clk_200                                     |                                                                                |            | inst_top/inst_mac/inst_read_buffer/_n0546_inv                             | 5                | 16             |
+| clk_200                                     |                                                                                |            | inst_top/inst_mac/inst_read_buffer/_n0552_inv                             | 19               | 64             |
+| clk_200                                     |                                                                                |            | inst_top/inst_mac/inst_read_buffer/header_done                            | 92               | 431            |
+| clk_200                                     |                                                                                |            | inst_top/inst_mac/inst_read_buffer/pipe4_empty_current_state[1]_AND_175_o | 17               | 113            |
+| clk_200                                     | buffer_logger_inst/inst_async_fifo_buffer/i_rrst_n_inv                         |            |                                                                           | 11               | 32             |
+| clk_200                                     | buffer_logger_inst/inst_async_fifo_buffer/i_wrst_n_inv                         |            |                                                                           | 10               | 32             |
+| clk_200                                     | buffer_logger_inst/inst_pkt_logger/rst_n_inv                                   |            |                                                                           | 3                | 6              |
+| clk_200                                     | buffer_logger_inst/inst_pkt_logger/tx_inst/rst_n_inv                           |            |                                                                           | 4                | 11             |
+| clk_200                                     | buffer_logger_inst/inst_pkt_logger/tx_inst/rst_n_inv                           |            | buffer_logger_inst/inst_pkt_logger/tx_inst/_n0126_inv                     | 1                | 3              |
+| clk_200                                     | buffer_logger_inst/inst_pkt_logger/tx_inst/rst_n_inv                           |            | buffer_logger_inst/inst_pkt_logger/tx_inst/_n0136_inv                     | 2                | 8              |
+| clk_200                                     | buffer_logger_inst/inst_pkt_logger/tx_inst/rst_n_inv                           |            | buffer_logger_inst/inst_pkt_logger/tx_inst/baud16_pulse                   | 2                | 5              |
+| clk_200                                     | buffer_logger_inst/rst_n_inv                                                   |            |                                                                           | 1                | 2              |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_0                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_1                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_2                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_3                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_4                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_5                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_6                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_7                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_8                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_9                                        | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_10                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_11                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_12                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_13                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_14                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_15                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_16                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_fp_top/rst_inv                                                   |            | inst_top/inst_fp_top/fp_detected_17                                       | 4                | 16             |
+| clk_200                                     | inst_top/inst_mac/inst_async_fifo/i_rrst_n_inv                                 |            |                                                                           | 5                | 20             |
+| clk_200                                     | inst_top/inst_mac/inst_link_speed_detector/inst_synchronizer_counter/rst_n_inv |            |                                                                           | 14               | 64             |
+| clk_200                                     | inst_top/inst_mac/inst_link_speed_detector/rst_n_inv                           |            | inst_top/inst_mac/inst_link_speed_detector/_n0073_inv                     | 2                | 2              |
+| clk_200                                     | inst_top/inst_mac/inst_link_speed_detector/rst_n_inv                           |            | inst_top/inst_mac/inst_link_speed_detector/ready_inv                      | 9                | 33             |
+| clk_200                                     | inst_top/inst_mac/inst_read_buffer/inst_preamble_detector/rst_n_inv            |            | inst_top/inst_mac/inst_read_buffer/inst_preamble_detector/empty_inv       | 10               | 64             |
+| clk_200                                     | inst_top/inst_mac/inst_read_buffer/rst_n_inv                                   |            |                                                                           | 6                | 13             |
+| clk_200                                     | inst_top/inst_mac/inst_read_buffer/rst_n_inv                                   |            | inst_top/inst_mac/inst_read_buffer/_n0523_inv                             | 4                | 16             |
+| clk_200                                     | inst_top/inst_mac/inst_read_buffer/rst_n_inv                                   |            | inst_top/inst_mac/inst_read_buffer/_n0537_inv                             | 2                | 8              |
+| clk_200                                     | inst_top/inst_mac/inst_read_buffer/rst_n_inv                                   |            | inst_top/inst_mac/inst_read_buffer/_n0543_inv                             | 91               | 431            |
+| clk_200                                     | inst_top/inst_mac/inst_read_buffer/rst_n_inv                                   |            | inst_top/inst_mac/inst_read_buffer/pipe4_empty_inv                        | 3                | 11             |
+| clk_200                                     | inst_top/inst_mac/rst_n_inv                                                    |            |                                                                           | 1                | 2              |
+| clk_200                                     | phy_rst_n_inv                                                                  |            |                                                                           | 1                | 1              |
+| clk_200                                     | phy_rst_n_inv                                                                  |            | fp_det                                                                    | 71               | 312            |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| phy_rx_clk_BUFGP                            |                                                                                |            | inst_top/inst_mac/inst_accumulator/_n0102_inv                             | 1                | 4              |
+| phy_rx_clk_BUFGP                            |                                                                                |            | inst_top/inst_mac/inst_async_fifo/i_wr_o_wfull_AND_29_o                   | 3                | 20             |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_accumulator/inst_allignment/rst_n_inv                   |            |                                                                           | 11               | 60             |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_accumulator/rst_n_inv                                   |            |                                                                           | 2                | 2              |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_accumulator/rst_n_inv                                   |            | inst_top/inst_mac/inst_accumulator/_n0072_inv                             | 2                | 3              |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_accumulator/rst_n_inv                                   |            | inst_top/inst_mac/inst_accumulator/_n0074_inv                             | 1                | 8              |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_accumulator/rst_n_inv                                   |            | inst_top/inst_mac/inst_accumulator/counter_counter_MUX_119_o              | 2                | 2              |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_async_fifo/i_wrst_n_inv                                 |            |                                                                           | 5                | 20             |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_link_speed_detector/inst_synchronizer_reset/rst_n_inv   |            |                                                                           | 2                | 2              |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_link_speed_detector/sync_reset_inv                      |            |                                                                           | 8                | 32             |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_synchronizer_accum/rst_n_inv                            |            |                                                                           | 2                | 2              |
+| phy_rx_clk_BUFGP                            | inst_top/inst_mac/inst_synchronizer_speed/rst_n_inv                            |            |                                                                           | 2                | 2              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ~clk_wiz_inst/mmcm_adv_inst_ML_NEW_I1       |                                                                                |            |                                                                           | 1                | 1              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ~clk_wiz_inst/mmcm_adv_inst_ML_NEW_OUT      | clk_wiz_inst/mmcm_adv_inst_ML_NEW_OUT_0                                        |            |                                                                           | 1                | 1              |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                        | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48E1 | BUFG  | BUFIO | BUFR  | MMCM_ADV  | Full Hierarchical Name                                                            |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top_wrapper/                  |           | 171/1535      | 315/3902      | 366/3873      | 0/1843        | 0/0       | 0/0     | 1/3   | 0/0   | 0/0   | 0/1       | top_wrapper                                                                       |
+| +buffer_logger_inst           |           | 3/589         | 2/566         | 2/2053        | 0/1820        | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/buffer_logger_inst                                                    |
+| ++inst_async_fifo_buffer      |           | 478/478       | 64/64         | 1851/1851     | 1820/1820     | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/buffer_logger_inst/inst_async_fifo_buffer                             |
+| ++inst_pkt_logger             |           | 95/108        | 473/500       | 172/200       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/buffer_logger_inst/inst_pkt_logger                                    |
+| +++tx_inst                    |           | 13/13         | 27/27         | 28/28         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/buffer_logger_inst/inst_pkt_logger/tx_inst                            |
+| +clk_wiz_inst                 |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 2/2   | 0/0   | 0/0   | 1/1       | top_wrapper/clk_wiz_inst                                                          |
+| +inst_top                     |           | 0/775         | 0/3021        | 0/1454        | 0/23          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top                                                              |
+| ++inst_fp_top                 |           | 76/335        | 289/1349      | 293/674       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top                                                  |
+| +++inst_gen_number_0          |           | 18/18         | 66/66         | 24/24         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_0                                |
+| +++inst_gen_number_1          |           | 4/4           | 18/18         | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_1                                |
+| +++inst_gen_number_10         |           | 25/25         | 98/98         | 45/45         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_10                               |
+| +++inst_gen_number_11         |           | 31/31         | 114/114       | 41/41         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_11                               |
+| +++inst_gen_number_12         |           | 22/22         | 82/82         | 25/25         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_12                               |
+| +++inst_gen_number_13         |           | 12/12         | 50/50         | 11/11         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_13                               |
+| +++inst_gen_number_14         |           | 19/19         | 66/66         | 28/28         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_14                               |
+| +++inst_gen_number_15         |           | 4/4           | 18/18         | 8/8           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_15                               |
+| +++inst_gen_number_16         |           | 5/5           | 18/18         | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_16                               |
+| +++inst_gen_number_17         |           | 15/15         | 66/66         | 26/26         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_17                               |
+| +++inst_gen_number_2          |           | 6/6           | 18/18         | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_2                                |
+| +++inst_gen_number_3          |           | 4/4           | 18/18         | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_3                                |
+| +++inst_gen_number_4          |           | 18/18         | 82/82         | 27/27         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_4                                |
+| +++inst_gen_number_5          |           | 7/7           | 34/34         | 20/20         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_5                                |
+| +++inst_gen_number_6          |           | 8/8           | 34/34         | 15/15         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_6                                |
+| +++inst_gen_number_7          |           | 15/15         | 50/50         | 10/10         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_7                                |
+| +++inst_gen_number_8          |           | 27/27         | 130/130       | 43/43         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_8                                |
+| +++inst_gen_number_9          |           | 19/19         | 98/98         | 41/41         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_fp_top/inst_gen_number_9                                |
+| ++inst_mac                    |           | 3/440         | 5/1672        | 3/780         | 0/23          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac                                                     |
+| +++inst_accumulator           |           | 9/23          | 19/79         | 10/40         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_accumulator                                    |
+| ++++inst_allignment           |           | 14/14         | 60/60         | 30/30         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_accumulator/inst_allignment                    |
+| +++inst_async_fifo            |           | 16/16         | 40/40         | 39/39         | 12/12         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_async_fifo                                     |
+| +++inst_link_speed_detector   |           | 47/63         | 103/169       | 151/161       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_link_speed_detector                            |
+| ++++inst_synchronizer_counter |           | 15/15         | 64/64         | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_link_speed_detector/inst_synchronizer_counter  |
+| ++++inst_synchronizer_reset   |           | 1/1           | 2/2           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_link_speed_detector/inst_synchronizer_reset    |
+| +++inst_read_buffer           |           | 319/333       | 1310/1375     | 498/535       | 11/11         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_read_buffer                                    |
+| ++++inst_preamble_detector    |           | 14/14         | 65/65         | 37/37         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_read_buffer/inst_preamble_detector             |
+| +++inst_synchronizer_accum    |           | 0/0           | 2/2           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_synchronizer_accum                             |
+| +++inst_synchronizer_speed    |           | 2/2           | 2/2           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0       | top_wrapper/inst_top/inst_mac/inst_synchronizer_speed                             |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

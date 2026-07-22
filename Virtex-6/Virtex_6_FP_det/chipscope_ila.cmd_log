@@ -1,0 +1,2 @@
+vhdtdtfi -prj Virtex_6_FP_det -o "Y:/Virtex 6 ISE design/Virtex_6_FP_det/chipscope_ila.tfi" -module chipscope_ila -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work C:/Coregen/chipscope_ila.vhd 
+vhdtdtfi -prj Virtex_6_FP_det -o "Y:/Virtex 6 ISE design/Virtex_6_FP_det/chipscope_ila.tfi" -module chipscope_ila -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work C:/Coregen/chipscope_ila.vhd 
