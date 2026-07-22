@@ -1,6 +1,6 @@
-# fp_det
+# Vigil: Line-Rate Fingerprint Detection for TCP-SYN Scanning on FPGAs
 
-`fp_det` (Fingerprint Detection) is a High-Throughput FPGA architecture for real-time TCP-SYN scan detection.
+`Vigil` is a High-Throughput FPGA architecture for real-time TCP-SYN scan detection.
 
 The project was developed as part of research on FPGA-based network security acceleration, where TCP-SYN packet fingerprints are converted into synthesizable hardware modules capable of detecting known scanning patterns at line rate.
 
