@@ -357,27 +357,27 @@ module top_wrapper (
 	 assign data_send_buffer[23:0] = fp_send_buffer[23:0];
 
 
-    packet_logging #(.DATA_SIZE(455), .BYTE_SIZE(57)) inst_pkt_logger(
-        .rst_n(rst_n),
-        .clk(clk_200),
-        .start(transmission_start),
-
-        .packet_data(data_send_buffer),
-        .tx_out(uart_tx_out)
-    );
-
-    // buffer_packet_logger #(
-    // .DATA_SIZE(455),     //Delay = Time delay in seconds * CLK_FREQ
-    // .BYTE_SIZE(57),
-    // .ADDRESS_SIZE(7)
-    // ) buffer_logger_inst(
-    //     .packet(data_send_buffer),
+    // packet_logging #(.DATA_SIZE(455), .BYTE_SIZE(57)) inst_pkt_logger(
     //     .rst_n(rst_n),
     //     .clk(clk_200),
-    //     .fp_det(transmission_start), 
-    //     .uart_tx_out(uart_tx_out),
-    //     .empty(speed) 
+    //     .start(transmission_start),
+
+    //     .packet_data(data_send_buffer),
+    //     .tx_out(uart_tx_out)
     // );
+
+    buffer_packet_logger #(
+    .DATA_SIZE(455),     //Delay = Time delay in seconds * CLK_FREQ
+    .BYTE_SIZE(57),
+    .ADDRESS_SIZE(7)
+    ) buffer_logger_inst(
+        .packet(data_send_buffer),
+        .rst_n(rst_n),
+        .clk(clk_200),
+        .fp_det(transmission_start), 
+        .uart_tx_out(uart_tx_out),
+        .empty(speed) 
+    );
 
 
     // //ChipScope signals
